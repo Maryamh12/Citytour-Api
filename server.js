@@ -6,7 +6,7 @@ import fallthroughHandler from "./middleware/fallthroughHandler.js";
 import dotenv from "dotenv";
 import errorHandler from "./middleware/errorHandler.js";
 import cors from "cors";
-import dotenv from "dotenv";
+
 dotenv.config();
 
 const app = express();
