@@ -5,7 +5,7 @@
 // This error object is then available here in our errorHandler function
 const errorHandler = (error, req, res, next) => {
   if (error.name === "JsonWebTokenError") {
-    return res.status(403).json({ message: "Token could not be verified." });
+    return res.status(403).json({ message: "Please Login." });
   }
   if (error.name === "CastError") {
     return res.status(400).json({

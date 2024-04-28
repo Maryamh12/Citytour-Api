@@ -4,9 +4,10 @@ import User from "../models/user.js";
 
 const auth = async (req, res, next) => {
   const rawToken = req.headers.authorization;
+  console.log(rawToken);
 
   if (!rawToken) {
-    return res.status(403).json({ message: "No token provided" });
+    return res.status(404).json({ message: "Please Logedin" });
   }
 
   const token = rawToken.replace("Bearer ", "");
@@ -31,7 +32,7 @@ const auth = async (req, res, next) => {
 
     if (!foundUser) {
       return res.status(403).json({
-        message: "User associated with that token doesn't exist anymore",
+        message: "User  with that Email and Password doesn't exist",
       });
     }
 

@@ -24,21 +24,14 @@ const storySchema = mongoose.Schema(
     image: { type: String, required: true, default: false },
     description: { type: String, required: true },
     createdBy: { type: mongoose.Schema.ObjectId, ref: "User", required: true },
-    comments: [commentSchema]
+    comments: [commentSchema],
+    likes: [{ type: mongoose.Schema.ObjectId, ref: "User", required: true }],
   },
   {
     timestamps: true,
   }
 );
-const likeSchema = mongoose.Schema(
-  {
-    
-    createdBy: { type: mongoose.Schema.ObjectId, ref: "User", required: true }
-  },
-  {
-    timestamps: true,
-  }
-);
+
 
 // To define our first model we are going to use the mongoose.Schema function.
 const catSchema = mongoose.Schema(
@@ -66,7 +59,7 @@ const catSchema = mongoose.Schema(
     // pass in the commentSchema
     
     storys: [storySchema],
-    likes: [likeSchema],
+    
   },
   {
     // but if you only need updatedAt, createdAt timestamps, it's an easier option

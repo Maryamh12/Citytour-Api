@@ -25,7 +25,11 @@ router
 
 router.route("/comment/:catId/:storyId/").post(auth, commentController.create);
 // .patch(auth, commentController.update);
+router.route("/search/").post(catController.search);
+
 router.route("/story/:catId").post(auth, storyController.create);
+router.route("/story/:catId/:storyId/").patch(auth, storyController.update);
+router.route("/story/:storyId/like/").post(auth, storyController.liked);
 router
   .route("/comment/:catId/:commentId/")
   .patch(

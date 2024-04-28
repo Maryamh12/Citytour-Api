@@ -156,6 +156,27 @@ const remove = async (req, res, next) => {
   }
 };
 
+const search = async (req, res, next) => {
+  const query = req.body.query.toLowerCase();
+
+  try {
+    const results = await Cat.find({ name: { $regex: query, $options: 'i' } });
+    // console.log(results[0])
+
+    if (!results[0]) {
+      return res.status(404).json({ message: `City with name :${query} not found.` });
+    }
+
+   
+
+    return res
+      .status(200)
+      .json({ message: "City has been updated", data: results });
+  } catch (err) {
+    next(err);
+  }
+};
+
 // When I export I actually create a new object
 // that contains all of my functions inside of this controller.
 export default {
@@ -170,4 +191,5 @@ export default {
   create,
   update,
   remove,
+  search
 };
