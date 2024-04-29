@@ -9,10 +9,7 @@ import { body } from "express-validator";
 
 const router = express.Router();
 
-// Cat routes
-// For any routes that need protection, we'll just add our auth middleware into
-// the post/patch/delete method! This will automatically run our auth function first
-// and then the endpoint handler.
+
 router
   .route("/cats")
   .get(catController.getAll)
@@ -24,7 +21,7 @@ router
   .delete(auth, catController.remove);
 
 router.route("/comment/:catId/:storyId/").post(auth, commentController.create);
-// .patch(auth, commentController.update);
+
 router.route("/search/").post(catController.search);
 
 router.route("/story/:catId").post(auth, storyController.create);
@@ -40,7 +37,7 @@ router
   )
   .delete(auth, commentController.remove);
 
-// Authentication routes -> User routes
+
 router
   .route("/register")
   .post(

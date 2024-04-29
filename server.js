@@ -21,9 +21,7 @@ app.use(router);
 app.use(errorHandler);
 app.use(fallthroughHandler);
 
-// since connectToDb is an asynchronous function, we have to wrap it inside of another function,
-// so that it's not at the top level anymore. Node often complains when asynchronous functions get called
-// from the top of a module. So we can't actually use the await keyword at the top level.
+
 const startServer = async () => {
   await connectToDb();
   console.log("Database connected");

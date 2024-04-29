@@ -71,22 +71,7 @@ const update = async (req, res, next) => {
     ) {
       return res.status(403).json({ message: "You cannot edit this story" });
     }
-    // if(dataToUpdate.name){
-    //   foundStory.name =  dataToUpdate.name;
-    // }
-    // if(dataToUpdate.image){
-    //   foundStory.image =  dataToUpdate.image;
-    // }
-    // if(dataToUpdate.description){
-    //   foundStory.description =  dataToUpdate.description;
-    // }
-
-    // if (req.file) {
-    //   const imageUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
-    //   dataToUpdate.image = imageUrl; // Save the new image URL in the story
-    // }
-
-    // Update story with new data
+   
     foundStory.set(dataToUpdate);
    
     await foundCat.save();
