@@ -109,7 +109,7 @@ const seedingData = {
       image: "https://images.pexels.com/photos/772700/pexels-photo-772700.jpeg?auto=compress&cs=tinysrgb&w=600",
       storys:[
         {
-          name:"Spring's Whisper: Elena's Journey Through the Olive Groves",
+          name:"Spring's Whisper:Elena's Journey Through the Olive Groves",
           image:"https://images.pexels.com/photos/164041/pexels-photo-164041.jpeg?auto=compress&cs=tinysrgb&w=600",
           description: "As the Grecian spring emerged, Elena found solace among the ancient olive groves that dotted the countryside, their silver leaves shimmering against the azure skies. The gentle hum of the Aegean Sea blended with the melodies of songbirds, and the earth itself seemed to awaken. Walking the stone paths of her ancestors, Elena felt the pulse of new life as wildflowers embroidered the land in a tapestry of color. It was a time of hope and renewal, a testament to the enduring spirit of Greece."
         },
