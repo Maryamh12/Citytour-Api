@@ -5,7 +5,12 @@ This project utilizes the React framework for the frontend and Node.js for the b
 
 ## Deployed Application
 
-View the deployed site here.
+View the deployed site [here](https://citytoure.netlify.app/).
+
+#### Sign up and create new account or try this demo user:
+- Username: mmm4545@email.com
+- Password: mmm454512345
+
 
 
 ## Application Visuals
